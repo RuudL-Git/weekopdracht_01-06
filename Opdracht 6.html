@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 6</title>
+
+
+
+<script>
+   
+    var teller=0;
+    var jaarteller=0;
+    function volgende(){
+
+        var plaatjes = ["zomer.jpg", "herfst.jpg", "winter.jpg", "lente.jpg"];
+        document.getElementById("plaatje").src = plaatjes[teller]; // id uit de imageregel
+            teller++;
+            jaarteller++
+               if (jaarteller == 13){
+               // console.log ("u heeft al 3 jaren gedaan");
+               // div uitzoeken
+               // alert("3x");
+               // var tekst = "testtekst" id="divlog"
+                //console.log (tekst)
+               document.getElementById("uitkomst").innerHTML="U heeft al 3 seizoenen gehad"
+               
+                }
+               //console.log (jaarteller)
+                if (teller == 4){
+                teller=0;
+                }
+
+    }
+
+
+</script>
+
+
+</head>
+<body>
+
+    
+<input type="image" src="zomer.jpg" id="plaatje"  height="400" width="600"><br><br>
+<input type="button" value="klikken voor wisseling" onclick="volgende()">
+
+<div id="uitkomst">
+
+</div>
+
+
+</body>
+</html>
